@@ -36,6 +36,6 @@ public class TestJavabased extends UnitTestBase {
 
   @Test
   public void testG() {
-    StringStore store = super.getBean("stringStoreTest");
+    String s = super.getBean("stringStoreTest");
   }
 }
