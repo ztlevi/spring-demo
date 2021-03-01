@@ -2,18 +2,20 @@ package com.imooc.beanannotation.jsr;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
+import org.springframework.stereotype.Service;
 
-//@Service
+// @Service
 @Named
 public class JsrServie {
 
-  //	@Resource
-  //	@Inject
+  // @Inject
+  // @Resource
   private JsrDAO jsrDAO;
 
-  //	@Resource
+  // @Resource
   @Inject
   public void setJsrDAO(@Named("jsrDAO") JsrDAO jsrDAO) {
     this.jsrDAO = jsrDAO;
