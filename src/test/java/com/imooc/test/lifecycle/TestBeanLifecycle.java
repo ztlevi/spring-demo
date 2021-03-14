@@ -8,7 +8,9 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestBeanLifecycle extends UnitTestBase {
 
-  public TestBeanLifecycle() { super("classpath:spring-lifecycle.xml"); }
+  public TestBeanLifecycle() {
+    super("classpath:spring-lifecycle.xml");
+  }
 
   @Test
   public void test1() {

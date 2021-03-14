@@ -21,7 +21,7 @@ public class InjectionServiceImpl implements InjectionService {
   }
 
   public void save(String arg) {
-    //模拟业务操作
+    // 模拟业务操作
     System.out.println("Service接收参数：" + arg);
     arg = arg + ":" + this.hashCode();
     injectionDAO.save(arg);

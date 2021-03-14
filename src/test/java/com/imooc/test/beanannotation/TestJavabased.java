@@ -2,7 +2,6 @@ package com.imooc.test.beanannotation;
 
 import com.imooc.beanannotation.javabased.MyDriverManager;
 import com.imooc.beanannotation.javabased.Store;
-import com.imooc.beanannotation.javabased.StringStore;
 import com.imooc.test.base.UnitTestBase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +10,9 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestJavabased extends UnitTestBase {
 
-  public TestJavabased() { super("classpath*:spring-beanannotation.xml"); }
+  public TestJavabased() {
+    super("classpath*:spring-beanannotation.xml");
+  }
 
   @Test
   public void test() {

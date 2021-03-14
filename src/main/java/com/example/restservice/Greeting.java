@@ -9,7 +9,11 @@ public class Greeting {
     this.content = content;
   }
 
-  public long getId() { return id; }
+  public long getId() {
+    return id;
+  }
 
-  public String getContent() { return content; }
+  public String getContent() {
+    return content;
+  }
 }

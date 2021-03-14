@@ -5,18 +5,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 
 @Configuration
 @ImportResource("classpath:config.xml")
 public class StoreConfig {
 
-  @Value("${url}") private String url;
+  @Value("${url}")
+  private String url;
 
-  @Value("${jdbc.username}") private String username;
+  @Value("${jdbc.username}")
+  private String username;
 
-  @Value("${password}") private String password;
+  @Value("${password}")
+  private String password;
 
   @Bean
   public MyDriverManager myDriverManager() {

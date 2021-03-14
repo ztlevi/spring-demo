@@ -13,7 +13,9 @@ public class BeanInvoker {
 
   @Autowired private Map<String, BeanInterface> map;
 
-  @Autowired @Qualifier("beanImplTwo") private BeanInterface beanInterface;
+  @Autowired
+  @Qualifier("beanImplTwo")
+  private BeanInterface beanInterface;
 
   public void say() {
     if (null != list && 0 != list.size()) {
@@ -30,8 +32,7 @@ public class BeanInvoker {
     if (null != map && 0 != map.size()) {
       System.out.println("map...");
       for (Map.Entry<String, BeanInterface> entry : map.entrySet()) {
-        System.out.println(entry.getKey() + "      " +
-                           entry.getValue().getClass().getName());
+        System.out.println(entry.getKey() + "      " + entry.getValue().getClass().getName());
       }
     } else {
       System.out.println("Map<String, BeanInterface> map is null !!!!!!!!!!");

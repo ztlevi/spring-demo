@@ -7,10 +7,9 @@ import org.springframework.context.ApplicationContextAware;
 public class MoocApplicationContext implements ApplicationContextAware {
 
   @Override
-  public void setApplicationContext(ApplicationContext applicationContext)
-      throws BeansException {
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
     System.out.println(
-        "MoocApplicationContext : " +
-        applicationContext.getBean("moocApplicationContext").hashCode());
+        "MoocApplicationContext : "
+            + applicationContext.getBean("moocApplicationContext").hashCode());
   }
 }

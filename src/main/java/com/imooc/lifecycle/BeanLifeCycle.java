@@ -5,9 +5,13 @@ import org.springframework.beans.factory.InitializingBean;
 
 public class BeanLifeCycle implements InitializingBean, DisposableBean {
 
-  public void defautInit() { System.out.println("Bean defautInit."); }
+  public void defautInit() {
+    System.out.println("Bean defautInit.");
+  }
 
-  public void defaultDestroy() { System.out.println("Bean defaultDestroy."); }
+  public void defaultDestroy() {
+    System.out.println("Bean defaultDestroy.");
+  }
 
   @Override
   public void destroy() throws Exception {
@@ -19,7 +23,11 @@ public class BeanLifeCycle implements InitializingBean, DisposableBean {
     System.out.println("Bean afterPropertiesSet.");
   }
 
-  public void start() { System.out.println("Bean start ."); }
+  public void start() {
+    System.out.println("Bean start .");
+  }
 
-  public void stop() { System.out.println("Bean stop."); }
+  public void stop() {
+    System.out.println("Bean stop.");
+  }
 }

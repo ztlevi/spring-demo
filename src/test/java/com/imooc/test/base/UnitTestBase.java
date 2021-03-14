@@ -24,8 +24,7 @@ public class UnitTestBase {
       springXmlpath = "classpath*:spring-*.xml";
     }
     try {
-      context =
-          new ClassPathXmlApplicationContext(springXmlpath.split("[,\\s]+"));
+      context = new ClassPathXmlApplicationContext(springXmlpath.split("[,\\s]+"));
       context.start();
     } catch (BeansException e) {
       e.printStackTrace();
@@ -40,7 +39,7 @@ public class UnitTestBase {
   @SuppressWarnings("unchecked")
   protected <T extends Object> T getBean(String beanId) {
     try {
-      return (T)context.getBean(beanId);
+      return (T) context.getBean(beanId);
     } catch (BeansException e) {
       e.printStackTrace();
       return null;

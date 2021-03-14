@@ -5,13 +5,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InvokeService {
-	
-	public void invoke() {
-		System.out.println("InvokeService ......");
-	}
-	
-	public void invokeException() {
-		throw new PessimisticLockingFailureException("");
-	}
 
+  public void invoke() {
+    System.out.println("InvokeService ......");
+  }
+
+  public void invokeException() {
+    throw new PessimisticLockingFailureException("");
+  }
 }

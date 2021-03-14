@@ -2,10 +2,8 @@ package com.imooc.beanannotation.jsr;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
-import org.springframework.stereotype.Service;
 
 // @Service
 @Named
@@ -31,5 +29,7 @@ public class JsrServie {
     System.out.println("JsrServie destroy.");
   }
 
-  public void save() { jsrDAO.save(); }
+  public void save() {
+    jsrDAO.save();
+  }
 }

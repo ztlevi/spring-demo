@@ -9,7 +9,9 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestOneInterface extends UnitTestBase {
 
-  public TestOneInterface() { super("classpath*:spring-ioc.xml"); }
+  public TestOneInterface() {
+    super("classpath*:spring-ioc.xml");
+  }
 
   @Test
   public void testSay() {

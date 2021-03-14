@@ -9,7 +9,9 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestBeanScope extends UnitTestBase {
 
-  public TestBeanScope() { super("classpath*:spring-beanscope.xml"); }
+  public TestBeanScope() {
+    super("classpath*:spring-beanscope.xml");
+  }
 
   @Test
   public void testSay() {

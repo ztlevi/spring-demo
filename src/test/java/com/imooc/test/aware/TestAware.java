@@ -14,7 +14,8 @@ public class TestAware extends UnitTestBase {
 
   @Test
   public void testMoocApplicationContext() {
-    System.out.println("testMoocApplicationContext : " + super.getBean("moocApplicationContext").hashCode());
+    System.out.println(
+        "testMoocApplicationContext : " + super.getBean("moocApplicationContext").hashCode());
   }
 
   @Test

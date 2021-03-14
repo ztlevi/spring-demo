@@ -16,9 +16,8 @@ public class MoocBeanName implements BeanNameAware, ApplicationContextAware {
   }
 
   @Override
-  public void setApplicationContext(ApplicationContext applicationContext)
-      throws BeansException {
-    System.out.println("setApplicationContext : " +
-                       applicationContext.getBean(this.beanName).hashCode());
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    System.out.println(
+        "setApplicationContext : " + applicationContext.getBean(this.beanName).hashCode());
   }
 }
