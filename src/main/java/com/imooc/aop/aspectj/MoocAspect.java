@@ -58,4 +58,14 @@ public class MoocAspect {
     System.out.println("Around : " + obj);
     return obj;
   }
+
+  // // Inner-type declartion
+  // // https://www.eclipse.org/aspectj/doc/next/adk15notebook/ataspectj-itds.html
+  // @DeclareParents(value = "com.imooc.aop.schema.advice.biz.*(+)", defaultImpl = FitImpl.class)
+  // public static Fit fit_impl;
+
+  // @Before("pointcut() && this(fit)")
+  // public void beforeIntroduction(Fit fit) {
+  //   System.out.println("Use Fit as input arg.");
+  // }
 }

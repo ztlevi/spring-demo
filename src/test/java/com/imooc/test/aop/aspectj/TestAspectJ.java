@@ -1,6 +1,7 @@
 package com.imooc.test.aop.aspectj;
 
 import com.imooc.aop.aspectj.biz.MoocBiz;
+import com.imooc.aop.schema.advice.Fit;
 import com.imooc.test.base.UnitTestBase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,5 +18,11 @@ public class TestAspectJ extends UnitTestBase {
   public void test() {
     MoocBiz biz = getBean("moocBiz");
     biz.save("This is test.");
+  }
+
+  @Test
+  public void testFit() {
+    Fit fit = (Fit) super.getBean("moocBiz");
+    fit.filter();
   }
 }
