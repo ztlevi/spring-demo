@@ -4,7 +4,7 @@ public class AspectBiz {
 
   public void biz() {
     System.out.println("AspectBiz biz.");
-    //		throw new RuntimeException();
+    // throw new RuntimeException();
   }
 
   public void init(String bizName, int times) {

@@ -13,31 +13,36 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
   class="com.imooc.aop.api.MoocMethodInterceptor"></bean>
   <bean id="moocThrowsAdvice"
   class="com.imooc.aop.api.MoocThrowsAdvice"></bean>
-  <!--     <bean id="bizLogicImplTarget" class="com.imooc.aop.api.BizLogicImpl"></bean> -->
-  <!--    <bean id="pointcutBean" class="org.springframework.aop.support.NameMatchMethodPointcut"> -->
-  <!--        <property name="mappedNames"> -->
-  <!--            <list> -->
-  <!--                <value>sa*</value> -->
-  <!--            </list> -->
-  <!--        </property> -->
-  <!--    </bean> -->
-  <!--    <bean id="defaultAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"> -->
-  <!--        <property name="advice" ref="moocBeforeAdvice" /> -->
-  <!--        <property name="pointcut" ref="pointcutBean" /> -->
-  <!--    </bean> -->
-  <!--    <bean id="bizLogicImpl" class="org.springframework.aop.framework.ProxyFactoryBean"> -->
-  <!--        <property name="target"> -->
-  <!--            <ref bean="bizLogicImplTarget"/> -->
-  <!--        </property> -->
-  <!--        <property name="interceptorNames"> -->
-  <!--            <list> -->
-  <!--                <value>defaultAdvisor</value> -->
-  <!--                <value>moocAfterReturningAdvice</value> -->
-  <!--                <value>moocMethodInterceptor</value> -->
-  <!--                <value>moocThrowsAdvice</value> -->
-  <!--            </list> -->
-  <!--        </property> -->
-  <!--    </bean>   -->
+  <!-- ================================== Method 1 ================================= -->
+  <!-- <bean id="bizLogicImplTarget" -->
+  <!-- class="com.imooc.aop.api.BizLogicImpl"></bean> -->
+  <!-- <bean id="pointcutBean" -->
+  <!-- class="org.springframework.aop.support.NameMatchMethodPointcut"> -->
+  <!--   <property name="mappedNames"> -->
+  <!--     <list> -->
+  <!--       <value>sa*</value> -->
+  <!--     </list> -->
+  <!--   </property> -->
+  <!-- </bean> -->
+  <!-- <bean id="defaultAdvisor" -->
+  <!-- class="org.springframework.aop.support.DefaultPointcutAdvisor"> -->
+  <!--   <property name="advice" ref="moocBeforeAdvice" /> -->
+  <!--   <property name="pointcut" ref="pointcutBean" /> -->
+  <!-- </bean> -->
+  <!-- <bean id="bizLogicImpl" -->
+  <!-- class="org.springframework.aop.framework.ProxyFactoryBean"> -->
+  <!--   <property name="target"> -->
+  <!--     <ref bean="bizLogicImplTarget" /> -->
+  <!--   </property> -->
+  <!--   <property name="interceptorNames"> -->
+  <!--     <list> -->
+  <!--       <value>defaultAdvisor</value> -->
+  <!--       <value>moocAfterReturningAdvice</value> -->
+  <!--       <value>moocMethodInterceptor</value> -->
+  <!--       <value>moocThrowsAdvice</value> -->
+  <!--     </list> -->
+  <!--   </property> -->
+  <!-- </bean> -->
   <!--    <bean id="bizLogicImplTarget" class="com.imooc.aop.api.BizLogicImpl"></bean> -->
   <!--    <bean id="bizLogicImpl" class="org.springframework.aop.framework.ProxyFactoryBean"> -->
   <!--        <property name="proxyInterfaces"> -->
@@ -57,6 +62,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
   <!--            </list> -->
   <!--        </property> -->
   <!--    </bean>   -->
+  <!-- ================================== Method 2 ================================= -->
   <bean id="baseProxyBean"
   class="org.springframework.aop.framework.ProxyFactoryBean"
   lazy-init="true" abstract="true"></bean>
