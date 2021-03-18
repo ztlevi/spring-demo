@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
-  <bean id="autoWiringService" class="com.imooc.autowiring.AutoWiringService">
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-autowire="byType">
+  <bean id="autoWiringService"
+  class="com.imooc.autowiring.AutoWiringService">
     <!-- autowire do not add property here. -->
   </bean>
   <bean class="com.imooc.autowiring.AutoWiringDAO"></bean>

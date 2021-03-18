@@ -1,10 +1,12 @@
 package com.imooc.test.aop;
 
-import com.imooc.aop.schema.advisors.service.InvokeService;
-import com.imooc.test.base.UnitTestBase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
+import org.springframework.dao.PessimisticLockingFailureException;
+
+import com.imooc.aop.schema.advisors.service.InvokeService;
+import com.imooc.test.base.UnitTestBase;
 
 @RunWith(BlockJUnit4ClassRunner.class)
 public class TestAOPSchemaAdvisors extends UnitTestBase {
@@ -16,8 +18,13 @@ public class TestAOPSchemaAdvisors extends UnitTestBase {
   @Test
   public void testSave() {
     InvokeService service = super.getBean("invokeService");
+    System.out.println();
     service.invoke();
+  }
 
+  @Test(expected = PessimisticLockingFailureException.class)
+  public void testSaveWithThrow() {
+    InvokeService service = super.getBean("invokeService");
     System.out.println();
     service.invokeException();
   }

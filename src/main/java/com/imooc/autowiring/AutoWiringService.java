@@ -4,11 +4,13 @@ public class AutoWiringService {
 
   private AutoWiringDAO autoWiringDAO;
 
-  // Constuctor needs to be disabled if we use auto-wiring byType or byName
-  public AutoWiringService(AutoWiringDAO autoWiringDAO) {
-    System.out.println("AutoWiringService");
-    this.autoWiringDAO = autoWiringDAO;
-  }
+  // Note: Constuctor needs to be disabled if we use auto-wiring byType or byName
+  // Change default-autowire in spring-autowiring.xml to constructor if we want to auto-wire by
+  // constructor
+  // public AutoWiringService(AutoWiringDAO autoWiringDAO) {
+  //   System.out.println("AutoWiringService");
+  //   this.autoWiringDAO = autoWiringDAO;
+  // }
 
   public void setAutoWiringDAO(AutoWiringDAO autoWiringDAO) {
     System.out.println("setAutoWiringDAO");
